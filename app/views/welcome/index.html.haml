@@ -1,0 +1,13 @@
+%h1 Passbook
+- if current_user
+  %p= "You are logged in as #{current_user.name}"
+- else
+  %p= "Welcome. #{link_to 'Click here to sign in', new_sessions_path}.".html_safe
+
+%p Passbook is a tool for young savers to manage their money at their local credit union.
+
+%h2 More information:
+%ul
+  %li= "for #{link_to 'credit unions', new_sessions_path}".html_safe
+  %li= "for #{link_to 'educators', new_sessions_path}".html_safe
+  %li= "for #{link_to 'parents', new_sessions_path}".html_safe
